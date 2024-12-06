@@ -24,7 +24,7 @@ class Payment_Views(APIView):
             serializer.save()
             return Response(serializer.data)
         else:
-            return Response(serializer.error)
+            return Response(serializer.errors)
         
 class Payment_Details(APIView):
     authentication_classes=[JWTAuthentication]

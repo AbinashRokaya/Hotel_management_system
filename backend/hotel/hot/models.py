@@ -8,13 +8,6 @@ Rating =[
     (5,5)
 ]
 
-Facilites=[
-    ('Wi-Fi','Wi-Fi'),
-    ('Pool','Pool'),
-    ('gym','gym')
-]
-
-
 
 
 # Create your models here.
@@ -23,7 +16,7 @@ class Hotel(models.Model):
     location = models.CharField(max_length=50)
     rating = models.IntegerField(choices=Rating,default=None)
     contact = models.CharField(max_length=10)
-    facilities = models.CharField(max_length=10,choices=Facilites,default=None)
+    facilities = models.TextField()
 
     def __str__(self):
         return self.name

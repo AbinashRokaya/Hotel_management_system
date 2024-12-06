@@ -22,7 +22,7 @@ class Staff_Views(APIView):
             serializer.save()
             return Response(serializer.data)
         else:
-            return Response(serializer.error)
+            return Response(serializer.errors)
         
 class Staff_Details(APIView):
     authentication_classes=[JWTAuthentication]
